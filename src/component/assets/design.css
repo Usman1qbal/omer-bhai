@@ -1,0 +1,45 @@
+.MuiFormControlLabel-root {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-left: -311px !important;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
+.MuiTypography-body1 {
+    font-size: 0.9rem !important;
+    font-family: monospace !important;
+    font-weight: bold  !important;
+    color: blue !important;
+}
+
+.makeStyles-root-106 {
+    border-radius: 30px !important;
+}
+
+.MuiOutlinedInput-multiline {
+    width: 448px  !important;
+}
+
+.makeStyles-root-137 {
+    border-radius: 43px !important;
+}
+.MuiTextField-root {
+    width: 200,
+  }
+
+  .MuiFormControl-root.MuiTextField-root {
+    width: 213px;
+    min-width: none !important;
+  }
+
+  .MuiOutlinedInput-inputMultiline {
+    padding: 0;
+    width: 302px !important;
+}
+
+.MuiOutlinedInput-multiline.MuiOutlinedInput-marginDense {
+    padding-top: 10.5px;
+    padding-bottom: 10.5px;
+    width: 325px !important;
+}

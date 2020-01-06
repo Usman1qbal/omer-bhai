@@ -1,0 +1,80 @@
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import logo from './assets/logo.png';
+import CustomizedInputBase from './appBar';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import { CardMedia } from '@material-ui/core';
+import sample from './assets/sample.mp4';
+
+
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+}));
+
+export default function CenteredGrid() {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <Grid container spacing={1}>
+        <Grid item xs={12}>
+            <img src={logo} alt={"logo"} width="150" height="150" ></img>
+        </Grid>
+        <Grid item xs={4}>
+        </Grid>
+        <Grid item xs={8}>
+         <CustomizedInputBase />
+         
+        </Grid>
+        <Grid item xs={4} style={{marginLeft:"10px"}}>
+        <TextField
+          id="outlined-textarea"
+          label="Sample Offer"
+          placeholder="Sample Offer"
+          multiline
+          value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+          rowsMax="8"
+          variant="outlined"
+        />
+        </Grid>
+        <Grid item xs={3}>
+          <Paper className={classes.paper}>
+          
+        <CardMedia 
+          component="iframe"
+          height="155"
+          image={sample}
+          title="Contemplative Reptile" />
+          </Paper>
+        </Grid>
+        <Grid item xs={4}>
+        <TextField
+          id="outlined-textarea"
+          label="Add Shopper Detail"
+          placeholder="Add Shopper Detail"
+          multiline
+          rowsMax="8"
+          variant="outlined"
+        />
+        </Grid>
+       
+        <Grid item xs={12}>
+          <Button variant="contained" color="primary" className={classes.margin}>
+          Join Now. It's free
+        </Button>
+        </Grid>
+      </Grid>
+    </div>
+  );
+}
